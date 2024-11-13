@@ -28,6 +28,8 @@ class Slist:  # 단순 연결 리스트(Singly Linked List) 클래스 정의
         return self.size == 0  # 노드의 개수가 0이면 True, 아니면 False 반환
 
     def insert_front(self, item):  # 리스트 맨 앞에 새 노드 삽입 메서드
+        # 현재 연결리스트의 첫 번째 노드 = 새 노드
+        # 새 노드 => item을 data값으로, self.head(기존)를 다음 노드로
         self.head = self.Node(item, self.head)  # 새 노드를 head 앞에 삽입
         self.size += 1  # 노드 개수 증가
 
